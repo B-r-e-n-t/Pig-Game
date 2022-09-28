@@ -70,9 +70,9 @@
   .player-active .name {
     font-weight: 700;
   }
-  .player-active .score {
+  /* .player-active .score {
     font-weight: 400;
-  }
+  } */
   
   .player-active .current {
     opacity: 1;
@@ -140,4 +140,8 @@
   
   .btn:focus {
     outline: none;
+  }
+
+  .hidden {
+    display: none;
   }
