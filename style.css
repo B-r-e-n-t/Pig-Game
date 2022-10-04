@@ -142,6 +142,15 @@
     outline: none;
   }
 
+  .player--winner {
+    background-color: #0cb43c;
+  }
+  
+  .player--winner .name {
+    font-weight: 700;
+    color: #a7ec1f;
+  }
+
   .hidden {
     display: none;
   }
