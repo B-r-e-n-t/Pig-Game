@@ -23,7 +23,7 @@
     font-weight: 400;
     height: 100vh;
     color: #333;
-    background-image: linear-gradient(to top left, #23bbf3 0%, #2e6abf 100%);
+    background-image: linear-gradient(to top left, #26f448, #23bbf3, #2e6abf, #26f448);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,6 +129,11 @@
   .btn-roll {
     top: 39.3rem;
   }
+
+  .winner-message {
+      top: 30.2rem
+    }
+
   .btn-hold {
     top: 46.1rem;
   }
@@ -143,14 +148,31 @@
   }
 
   .player--winner {
-    background-color: #0cb43c;
+    background-color: #26f448;
   }
   
   .player--winner .name {
     font-weight: 700;
-    color: #a7ec1f;
+    color: #f2ea08;
+  }
+
+  .player--winner .score {
+    color: #f2ea08;
+  }
+
+  .player--winner .current-label {
+    color: #f2ea08;
+  }
+
+  .player--winner .current {
+    background-color: #94f2a4;
+    color: #f2ea08;
   }
 
   .hidden {
     display: none;
+  }
+
+  .you-win {
+    content: 'You Win!'
   }

@@ -9,6 +9,9 @@ const currentScore1 = document.querySelector('#current-1');
 const newButton = document.querySelector('.btn-new');
 const rollDiceButton = document.querySelector('.btn-roll');
 const holdButton = document.querySelector('.btn-hold');
+const youWin0 = document.querySelector('.you-win0');
+const youWin1 = document.querySelector('.you-win1');
+const winnerMessage = document.querySelector('.winner-message');
 
 
 
@@ -16,6 +19,7 @@ const holdButton = document.querySelector('.btn-hold');
 scoreEl0.textContent = 0;
 scoreEl1.textContent = 0;
 diceEl.classList.add('hidden');
+winnerMessage.classList.add('hidden');
 currentScore0.textContent = 0;
 currentScore1.textContent = 0;
 
@@ -55,12 +59,13 @@ holdButton.addEventListener('click', function() {
     document.getElementById(`current-${activePlayer}`).textContent = 0;
     currentScore = 0;
     // check score for 100, finish game
-    if(scores[activePlayer] >= 10 ) {
+    if(scores[activePlayer] >= 100 ) {
         document.querySelector(`.player-${activePlayer}`).classList.add('player--winner');
         document.querySelector(`.player-${activePlayer}`).classList.remove('player-active');
         diceEl.classList.add('hidden');
         rollDiceButton.classList.add('hidden');
         holdButton.classList.add('hidden')
+        winnerMessage.classList.remove('hidden');
 
     } else {
         // switch to next player
@@ -83,4 +88,7 @@ newButton.addEventListener('click', function() {
     player1El.classList.remove('player--winner');
     player0El.classList.add('player-active');
     player1El.classList.remove('player-active');
+    winnerMessage.classList.add('hidden');
+    rollDiceButton.classList.remove('hidden');
+    holdButton.classList.remove('hidden')
 })
